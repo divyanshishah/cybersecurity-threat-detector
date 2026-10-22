@@ -1,76 +1,103 @@
-🛡️ CyberShield Threat Intelligence Platform
+# 🛡️ CyberShield Threat Intelligence Platform
 
-   An enterprise-grade, real-time cybersecurity platform designed for Phishing URL Detection, Malicious Email Analysis, and Batch Security Auditing built with Python and Streamlit.
+An enterprise-grade, real-time cybersecurity platform designed for **Phishing URL Detection, Malicious Email Analysis, and Batch Security Auditing** built with Python and Streamlit.
 
-📌 Project Overview
+## 📌 Project Overview
 
-   CyberShield Threat Detector is an integrated security tool built to combat digital phishing and social engineering attacks. By leveraging lexical feature extraction, heuristic analysis, and Natural Language Processing (NLP) pattern detection, the application enables users to evaluate individual suspicious URLs, analyze incoming email content for embedded threats, and conduct batch audits on datasets.
+CyberShield Threat Detector is an integrated security tool built to combat digital phishing and social engineering attacks. By leveraging lexical feature extraction, heuristic analysis, and Natural Language Processing (NLP) pattern detection, the application enables users to:
 
-📊 Dataset Link
+- Evaluate individual suspicious URLs.
+- Analyze incoming email content for embedded threats.
+- Conduct batch audits on datasets.
 
-   Dataset Used: Phishing Site URLs & Malicious Email Detection Dataset
+## 📊 Dataset Link
 
-   Access / Link: Kaggle - Phishing Websites Dataset / Included locally as sample_urls.csv for Module 3 batch analysis.
+**Dataset Used:** Phishing Site URLs & Malicious Email Detection Dataset
 
-🛠️ Technologies Used
+**Access / Link:** Kaggle - Phishing Websites Dataset / Included locally as `sample_urls.csv` for Module 3 batch analysis.
 
-   Programming Language: Python 3.9+
+## 🛠️ Technologies Used
 
-   Web Application Framework: Streamlit
+- **Programming Language:** Python 3.9+
+- **Web Application Framework:** Streamlit
+- **Data Processing & Analysis:** Pandas, NumPy
+- **Interactive Visualizations:** Plotly Express, Matplotlib, Seaborn
+- **Pattern Matching & NLP Engine:** Python `re` (Regular Expressions) & `urllib.parse`
 
-   Data Processing & Analysis: Pandas, NumPy
+## 🚀 Setup & Run Instructions
 
-   Interactive Visualizations: Plotly Express, Matplotlib, Seaborn
+### 1. Prerequisites
 
-   Pattern Matching & NLP Engine: Python re (Regular Expressions) & urllib.parse
+Ensure Python 3.9 or higher is installed on your operating system.
 
-🚀 Setup & Run Instructions
+### 2. Extract / Clone Project
 
-   1. Prerequisites
+Extract the project ZIP file or clone the repository using Git:
 
-   Ensure Python 3.9 or higher is installed on your operating system.
+```bash
+git clone https://github.com/divyanshishah/cybersecurity-threat-detector.git
+cd cybersecurity-threat-detector
+```
 
-   2. Extract / Clone Project
+### 3. Install Dependencies
 
-   Extract the project ZIP file or clone the repository using Git:
+Install all required libraries using the provided `requirements.txt`:
 
-   git clone https://github.com/divyanshishah/cybersecurity-threat-detector.git
-   cd cybersecurity-threat-detector
+```bash
+pip install -r requirements.txt
+```
 
+### 4. Run the Application
 
-   3. Install Dependencies
+Execute the Streamlit application using the main submission script:
 
-   Install all required libraries using the provided requirements.txt:
+```bash
+streamlit run Divyanshi_PhishingDetection.py
+```
 
-   pip install -r requirements.txt
+**Note:** The web application will automatically open in your default browser at:
 
+[http://localhost:8501](http://localhost:8501)
 
-   4. Run the Application
+## 📁 Key Files & Project Structure
 
-   Execute the Streamlit application using the main submission script:
+```text
+phishing_email_detection_project/
+│
+├── Divyanshi_PhishingDetection.py  # Main Streamlit Application Source Code
+├── email_detector.py               # Module 2: Email NLP Analysis Engine
+├── url_detector.py                 # Module 1: Heuristic URL Feature Extractor
+├── sample_urls.csv                 # Sample Dataset for Batch Auditing
+├── requirements.txt                # Python Library Dependencies
+├── Divyanshi_ProjectReport.docx    # Formal Project Documentation Report
+└── README.md                       # Project Overview and Instructions
+```
 
-   streamlit run Divyanshi_PhishingDetection.py
+## 🔑 Key Features
 
+### 1. Real-Time URL Risk Scoring
 
-   Note: The web application will automatically open in your default browser at http://localhost:8501.
+Evaluates structural indicators, including:
 
-📁 Key Files & Project Structure
+- IP address presence.
+- `@` symbols.
+- Domain hyphens.
+- Suspicious keywords.
 
-      phishing_email_detection_project/
-      │
-      ├── Divyanshi_PhishingDetection.py  # Main Streamlit Application Source Code
-      ├── email_detector.py               # Module 2: Email NLP Analysis Engine
-      ├── url_detector.py                 # Module 1: Heuristic URL Feature Extractor
-      ├── sample_urls.csv                 # Sample Dataset for Batch Auditing
-      ├── requirements.txt                # Python Library Dependencies
-      ├── Divyanshi_ProjectReport.docx    # Formal Project Documentation Report
-      └── README.md                       # Project Overview and Instructions
+### 2. Email Content Extraction
 
+- Automatically scans email text.
+- Extracts embedded links.
+- Highlights suspicious urgency triggers.
 
-🔑 Key Features
+### 3. Batch CSV Audit
 
-   Real-Time URL Risk Scoring: Evaluates structural indicators (IP presence, @ symbols, domain hyphens, keywords).
+- Allows batch processing of external datasets.
+- Provides interactive visual dashboards.
+- Supports downloadable scan reports.
 
-   Email Content Extraction: Automatically scans email text, extracts embedded links, and highlights suspicious urgency triggers.
+---
 
-   Batch CSV Audit: Allows batch processing of external datasets with interactive visual dashboards and downloadable scan reports.
+**Project:** CyberShield Threat Intelligence Platform  
+**Framework:** Streamlit  
+**Language:** Python 3.9+
