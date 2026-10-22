@@ -1,65 +1,76 @@
-# 🛡️ CyberShield Threat Intelligence Platform
+🛡️ CyberShield Threat Intelligence Platform
 
-> An enterprise-grade, real-time cybersecurity platform designed for **Phishing URL Detection**, **Malicious Email Analysis**, and **Batch Security Auditing** built with Python and Streamlit.
+An enterprise-grade, real-time cybersecurity platform designed for Phishing URL Detection, Malicious Email Analysis, and Batch Security Auditing built with Python and Streamlit.
 
----
+📌 Project Overview
 
-## 📌 Features & Key Modules
+CyberShield Threat Detector is an integrated security tool built to combat digital phishing and social engineering attacks. By leveraging lexical feature extraction, heuristic analysis, and Natural Language Processing (NLP) pattern detection, the application enables users to evaluate individual suspicious URLs, analyze incoming email content for embedded threats, and conduct batch audits on datasets.
 
-### 🔗 Module 1: Phishing URL Detector
-- **Feature Extraction**: Extracts character patterns, lexical attributes, sub-domain structures, and protocol parameters.
-- **Heuristic & Rule-Based Engine**: Identifies IP address usage, suspicious keywords (`login`, `verify`, `account`, etc.), excessive hyphens, and high-entropy parameters.
-- **Real-Time Risk Scoring**: Generates instant threat classification (*Potential Phishing* vs. *Likely Legitimate*) with a calculated risk score percentage.
+📊 Dataset Link
 
-### 📧 Module 2: Malicious Email Detector
-- **NLP Suspicious Pattern Analysis**: Scans email headers, subjects, and body text against known social-engineering triggers (e.g., urgency flags, account suspension notices).
-- **Embedded Link Extraction**: Automatically extracts hidden and visible URLs from email content and passes them directly to the URL Scanner engine.
-- **Combined Threat Assessment**: Computes a unified threat score factoring in both text semantics and embedded URL risks.
+Dataset Used: Phishing Site URLs & Malicious Email Detection Dataset
 
-### 📊 Module 3: Security Dashboard & Batch CSV Scanner
-- **Bulk Auditing**: Upload CSV datasets containing batches of URLs for enterprise-level security audits.
-- **Interactive Visualizations**: View threat distributions with real-time interactive Pie Charts (powered by Plotly).
-- **Report Export**: Export complete security scan results and audit trails to downloadable CSV reports.
+Access / Link: Kaggle - Phishing Websites Dataset / Included locally as sample_urls.csv for Module 3 batch analysis.
 
----
+🛠️ Technologies Used
 
-## 🛠️ Tech Stack & Architecture
+Programming Language: Python 3.9+
 
-- **Frontend / UI**: [Streamlit](https://streamlit.io/) (Enhanced with custom dark cyber-themed CSS)
-- **Data Processing**: `pandas`, `numpy`
-- **Visualization**: `plotly`, `matplotlib`, `seaborn`
-- **Regex & NLP Rules**: Built-in Python `re` engine & URL parsing libraries
+Web Application Framework: Streamlit
 
----
+Data Processing & Analysis: Pandas, NumPy
 
-## 📁 Project Structure
+Interactive Visualizations: Plotly Express, Matplotlib, Seaborn
 
-```text
-cybersecurity_scanner/
-│
-├── app.py                  # Main Streamlit CyberShield Security Application
-├── url_detector.py         # Module 1: Heuristic Engine for Phishing URL Scanning
-├── email_detector.py       # Module 2: Email NLP Analysis & Embedded Link Extractor
-├── sample_urls.csv         # Sample dataset for Batch CSV testing
-├── requirements.txt        # Project dependencies
-└── README.md               # Project documentation
+Pattern Matching & NLP Engine: Python re (Regular Expressions) & urllib.parse
 
----
+🚀 Setup & Run Instructions
 
-## 🚀 Quick Start Guide
+1. Prerequisites
 
-### 1. Prerequisites
-Ensure you have Python 3.9+ installed on your system.
+Ensure Python 3.9 or higher is installed on your operating system.
 
-### 2. Extract & Setup
-1. Extract the downloaded ZIP archive.
-2. Open your terminal inside the extracted project folder.
+2. Extract / Clone Project
 
-### 3. Install Dependencies
-```bash
+Extract the project ZIP file or clone the repository using Git:
+
+git clone https://github.com/YOUR_USERNAME/phishing_email_detection_project.git
+cd phishing_email_detection_project
+
+
+3. Install Dependencies
+
+Install all required libraries using the provided requirements.txt:
+
 pip install -r requirements.txt
 
-### 4. Run the application:
-   ```bash
-   streamlit run app.py
-   ```
+
+4. Run the Application
+
+Execute the Streamlit application using the main submission script:
+
+streamlit run Divyanshi_PhishingDetection.py
+
+
+Note: The web application will automatically open in your default browser at http://localhost:8501.
+
+📁 Key Files & Project Structure
+
+phishing_email_detection_project/
+│
+├── Divyanshi_PhishingDetection.py  # Main Streamlit Application Source Code
+├── email_detector.py               # Module 2: Email NLP Analysis Engine
+├── url_detector.py                 # Module 1: Heuristic URL Feature Extractor
+├── sample_urls.csv                 # Sample Dataset for Batch Auditing
+├── requirements.txt                # Python Library Dependencies
+├── Divyanshi_ProjectReport.docx    # Formal Project Documentation Report
+└── README.md                       # Project Overview and Instructions
+
+
+🔑 Key Features
+
+Real-Time URL Risk Scoring: Evaluates structural indicators (IP presence, @ symbols, domain hyphens, keywords).
+
+Email Content Extraction: Automatically scans email text, extracts embedded links, and highlights suspicious urgency triggers.
+
+Batch CSV Audit: Allows batch processing of external datasets with interactive visual dashboards and downloadable scan reports.
