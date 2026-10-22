@@ -52,7 +52,7 @@ pip install -r requirements.txt
 Execute the Streamlit application using the main submission script:
 
 ```bash
-streamlit run Divyanshi_PhishingDetection.py
+streamlit run Divyanshi_CybersecurityThreatDetector.py
 ```
 
 **Note:** The web application will automatically open in your default browser at:
@@ -64,7 +64,7 @@ streamlit run Divyanshi_PhishingDetection.py
 ```text
 phishing_email_detection_project/
 │
-├── Divyanshi_PhishingDetection.py  # Main Streamlit Application Source Code
+├── Divyanshi_CybersecurityThreatDetector.py  # Main Streamlit Application Source Code
 ├── email_detector.py               # Module 2: Email NLP Analysis Engine
 ├── url_detector.py                 # Module 1: Heuristic URL Feature Extractor
 ├── sample_urls.csv                 # Sample Dataset for Batch Auditing
